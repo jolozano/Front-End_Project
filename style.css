@@ -1,4 +1,21 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+#container2 {
+    background-color: rgb(37, 36, 36);
+}
 h1 {
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
-};
+}
+.search {
+    display: block;
+    margin: auto;
+}
+#container {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: yellow;
+}
