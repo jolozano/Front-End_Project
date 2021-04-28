@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
     $containerDiv2.appendTo("body");
 
-    var $search = $("button");
+    var $search = $("#searchDiv");
 
     function getInputVal() {
         let $text = $("#searchBox").val();
@@ -26,7 +26,7 @@ $( document ).ready(function() {
 
     // // $( "body" ).on('keypress', enterInput);
 
-    $search.on('click', function(){
+    $search.on('keypress click', function(){
 
         $containerDiv1.empty();
 
