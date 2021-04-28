@@ -13,9 +13,14 @@ h1 {
     display: block;
     margin: auto;
 }
-#container {
+#container1 {
     display: block;
     margin: auto;
     text-align: center;
     color: yellow;
+    text-decoration: underline;
+    padding: 15px;
+}
+.resultDiv{
+    padding: 5px;
 }
