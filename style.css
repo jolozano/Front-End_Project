@@ -6,11 +6,12 @@ body {
     background-color:#cdb9b1;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: fit-content;
     text-align: center;
     justify-content: center;
     margin: auto;
     color:white;
+    border-radius: 15px;
 }
 h1 {
     font-size: 60px;
@@ -19,6 +20,8 @@ h1 {
 .search {
     display: block;
     margin: auto;
+    border-radius: 6px;
+    width: fit-content
 }
 #container1 {
     display: block;
@@ -27,9 +30,13 @@ h1 {
     color:#FFE81F;
     text-decoration: underline;
     padding: 15px;
+    width: fit-content;
 }
 .resultDiv{
     padding: 5px;
+    width:fit-content;
+    justify-content: center;
+    margin: auto;
 }
 .infoCard {
     display: flex;
