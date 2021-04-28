@@ -40,7 +40,7 @@ $( document ).ready(function() {
                 console.log(index)
                 $containerDiv2.empty();
                 for (let key in index) {
-                let $infoCard = $(`<div>${key}: ${index[key]}</div>`);
+                let $infoCard = $(`<div class='infoCard'><em style='color:#680c0a'>${key}:</em> ${index[key]}</div>`);
                 $infoCard.appendTo($containerDiv2);
                 };
             }
