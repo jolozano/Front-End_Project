@@ -20,6 +20,14 @@ $( document ).ready(function() {
         $containerDiv2.empty();
     };
 
+    function makeInfoCard(obj) {
+        $containerDiv2.empty();
+        for (let key in obj) {
+            let $infoCard = $(`<div class='infoCard'><em style='color:#000000'>${key}:</em> ${obj[key]}</div>`);
+            $infoCard.appendTo($containerDiv2);
+        };
+    }
+
     $search.on('keypress click', function(){
 
         emptyContainers();
@@ -34,17 +42,8 @@ $( document ).ready(function() {
                 let $fullName = index.name;
                 let $resultDiv = $(`<div class='resultDiv'>${$fullName}</div>`);
                 $resultDiv.appendTo($containerDiv1);
-                $resultDiv.on('click', function() {makeDiv(index)});
+                $resultDiv.on('click', function() {makeInfoCard(index)});
             };
-
-            function makeDiv(obj) {
-                $containerDiv2.empty();
-                for (let key in obj) {
-                    let $infoCard = $(`<div class='infoCard'><em style='color:#000000'>${key}:</em> ${obj[key]}</div>`);
-                    $infoCard.appendTo($containerDiv2);
-                };
-            }
-
         });
     });
 })
