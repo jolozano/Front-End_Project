@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
     var $containerDiv1 = $("<div id='container1'></div>");
 
     $containerDiv1.appendTo("body");
@@ -13,24 +14,15 @@ $( document ).ready(function() {
         let $text = $("#searchBox").val();
         return $text;
     };
-    // var $testButton = $("<button class='test' id='tester'>Test</button>");
-    // $testButton.appendTo("#searchDiv");
 
-    // $testButton.on('click keypress',  enterInput);
-    // function enterInput(event) {
-    //     console.log(event)
-    //     if (event.type == 'click' || event.keyCode == 13) {
-    //         alert('it worked');
-    //     }
-    // }
-
-    // // $( "body" ).on('keypress', enterInput);
+    function emptyContainers() {
+        $containerDiv1.empty();
+        $containerDiv2.empty();
+    };
 
     $search.on('keypress click', function(){
 
-        $containerDiv1.empty();
-
-        $containerDiv2.empty();
+        emptyContainers();
 
         $.get(`https://swapi.dev/api/people/?search=${getInputVal()}`, (data) => {
             const searchResults = data.results;
@@ -45,11 +37,11 @@ $( document ).ready(function() {
                 $resultDiv.on('click', function() {makeDiv(index)});
             };
 
-            function makeDiv(index) {
+            function makeDiv(obj) {
                 $containerDiv2.empty();
-                for (let key in index) {
-                let $infoCard = $(`<div class='infoCard'><em style='color:#680c0a'>${key}:</em> ${index[key]}</div>`);
-                $infoCard.appendTo($containerDiv2);
+                for (let key in obj) {
+                    let $infoCard = $(`<div class='infoCard'><em style='color:#000000'>${key}:</em> ${obj[key]}</div>`);
+                    $infoCard.appendTo($containerDiv2);
                 };
             }
 

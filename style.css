@@ -1,9 +1,20 @@
 body {
-    background-color: black;
-    color:#cdb9b1;
+    background-image: url("stars2.png");
+    color:#FFFFFF;
 }
+
+#container1 {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color:#FFE81F;
+    text-decoration: underline;
+    padding: 15px;
+    width: fit-content;
+}
+
 #container2 {
-    background-color:#cdb9b1;
+    background-color:#64696C;
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -23,15 +34,7 @@ h1 {
     border-radius: 6px;
     width: fit-content
 }
-#container1 {
-    display: block;
-    margin: auto;
-    text-align: center;
-    color:#FFE81F;
-    text-decoration: underline;
-    padding: 15px;
-    width: fit-content;
-}
+
 .resultDiv{
     padding: 5px;
     width:fit-content;
