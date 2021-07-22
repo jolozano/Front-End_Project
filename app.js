@@ -33,8 +33,9 @@ $( document ).ready(function() {
         emptyContainers();
 
         $.get(`https://swapi.dev/api/people/?search=${getInputVal()}`, (data) => {
-            const searchResults = data.results;
-
+            let searchResults = data.results;
+            emptyContainers();
+            
             let $infoDiv = $("<div>Click on Name for More information.</div>");
             $infoDiv.appendTo($containerDiv1);
 
