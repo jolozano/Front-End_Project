@@ -13,18 +13,6 @@ $( document ).ready(function() {
         let $text = $("#searchBox").val();
         return $text;
     };
-    // var $testButton = $("<button class='test' id='tester'>Test</button>");
-    // $testButton.appendTo("#searchDiv");
-
-    // $testButton.on('click keypress',  enterInput);
-    // function enterInput(event) {
-    //     console.log(event)
-    //     if (event.type == 'click' || event.keyCode == 13) {
-    //         alert('it worked');
-    //     }
-    // }
-
-    // // $( "body" ).on('keypress', enterInput);
 
     $search.on('click', function(){
 
